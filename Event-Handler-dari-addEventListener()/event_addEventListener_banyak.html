@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="judul">Belajar JavaScript</h1>
+    <p></p>
+    <script>
+      const tampilkanClick = () => {
+        document.querySelector("p").innerHTML = "Judul di klik";
+      };
+
+      const tampilkanDblclick = () => {
+        document.querySelector("p").innerHTML = "Judul di double klik";
+      };
+
+      const tampilkanContextmenu = () => {
+        document.querySelector("p").innerHTML = "Judul di klik kanan";
+      };
+
+      let h1Node = document.getElementById("judul");
+
+      h1Node.addEventListener("click", tampilkanClick);
+      h1Node.addEventListener("dblclick", tampilkanDblclick);
+      h1Node.addEventListener("contextmenu", tampilkanContextmenu);
+    </script>
+  </body>
+</html>

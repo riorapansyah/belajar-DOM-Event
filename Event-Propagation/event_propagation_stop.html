@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <h1>Belajar<em>JavaScript</em></h1>
+    </div>
+    <script>
+      let emNode = document.querySelector("em");
+      let h1Node = document.querySelector("h1");
+      let divNode = document.querySelector("div");
+
+      const tampilkanEm = (e) => {
+        console.log("Tag em di-klik");
+        e.stopPropagation();
+      };
+
+      const tampilkanH1 = () => {
+        console.log("Tag h1 di-klik");
+      };
+      const tampilkanDiv = () => {
+        console.log("Tag div di-klik");
+      };
+
+      divNode.addEventListener("click", tampilkanDiv);
+      emNode.addEventListener("click", tampilkanEm);
+      h1Node.addEventListener("click", tampilkanH1);
+    </script>
+  </body>
+</html>
